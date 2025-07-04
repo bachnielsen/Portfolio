@@ -10,12 +10,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <EducationSection />
-      <ContactSection />
-      <Footer />
+      <div className="md:ml-64">
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <EducationSection />
+        <ContactSection />
+        <Footer />
+      </div>
     </div>
   );
 }

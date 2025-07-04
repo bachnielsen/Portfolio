@@ -2,7 +2,7 @@ import { personalInfo } from "@/lib/data";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="pt-20 pb-16 px-6">
+    <section id="home" className="pt-8 pb-16 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col items-center text-center space-y-8 fade-in">
           <img
