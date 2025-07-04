@@ -2,7 +2,7 @@ import { education } from "@/lib/data";
 
 export default function EducationSection() {
   return (
-    <section id="education" className="py-16 px-6 bg-card">
+    <section id="education" className="py-16 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="space-y-12 slide-up">
           <h2 className="section-title text-4xl font-bold">/education</h2>
