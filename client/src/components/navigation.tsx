@@ -60,23 +60,19 @@ export default function Navigation() {
       </button>
 
       {/* Sidebar Navigation */}
-      <nav className={`fixed top-0 left-0 h-full w-64 bg-card border-r border-border z-40 transform transition-transform duration-300 ease-in-out ${
+      <nav className={`fixed top-0 left-0 h-full w-64 z-40 transform transition-transform duration-300 ease-in-out ${
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       } md:translate-x-0`}>
         <div className="flex flex-col h-full p-6">
-          <div className="mb-8">
-            <h2 className="text-xl font-bold text-primary font-mono">Navigation</h2>
-          </div>
-          
-          <div className="flex-1 space-y-2">
+          <div className="flex-1 space-y-2 pt-8">
             {navItems.map(({ id, label }) => (
               <button
                 key={id}
                 onClick={() => handleNavClick(id)}
                 className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 ${
                   activeSection === id
-                    ? "bg-primary/20 text-primary border-l-4 border-primary"
-                    : "text-muted-foreground hover:text-primary hover:bg-primary/10"
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-primary"
                 }`}
               >
                 <span className="font-mono text-sm">{label}</span>
@@ -84,7 +80,7 @@ export default function Navigation() {
             ))}
           </div>
           
-          <div className="mt-auto pt-6 border-t border-border">
+          <div className="mt-auto pt-6">
             <p className="text-xs text-muted-foreground font-mono">
               © 2025 Personal Resume
             </p>
