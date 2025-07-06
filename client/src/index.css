@@ -5,31 +5,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --background: hsl(231, 58%, 8%);
-  --foreground: hsl(46, 21%, 85%);
-  --card: hsl(230, 41%, 12%);
-  --card-foreground: hsl(46, 21%, 85%);
-  --popover: hsl(230, 41%, 12%);
-  --popover-foreground: hsl(46, 21%, 85%);
+  --background: hsl(0, 0%, 98%);
+  --foreground: hsl(220, 15%, 25%);
+  --card: hsl(0, 0%, 95%);
+  --card-foreground: hsl(220, 15%, 25%);
+  --popover: hsl(0, 0%, 95%);
+  --popover-foreground: hsl(220, 15%, 25%);
   --primary: hsl(31, 100%, 63%);
-  --primary-foreground: hsl(231, 58%, 8%);
-  --secondary: hsl(230, 41%, 12%);
-  --secondary-foreground: hsl(46, 21%, 85%);
-  --muted: hsl(230, 13%, 32%);
-  --muted-foreground: hsl(212, 12%, 55%);
-  --accent: hsl(49, 100%, 70%);
-  --accent-foreground: hsl(231, 58%, 8%);
-  --destructive: hsl(0, 62%, 30%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(220, 5%, 85%);
+  --secondary-foreground: hsl(220, 15%, 25%);
+  --muted: hsl(220, 5%, 85%);
+  --muted-foreground: hsl(220, 10%, 45%);
+  --accent: hsl(49, 100%, 50%);
+  --accent-foreground: hsl(220, 15%, 25%);
+  --destructive: hsl(0, 62%, 50%);
   --destructive-foreground: hsl(0, 0%, 98%);
-  --border: hsl(215, 19%, 33%);
-  --input: hsl(215, 19%, 33%);
+  --border: hsl(220, 10%, 85%);
+  --input: hsl(220, 10%, 85%);
   --ring: hsl(31, 100%, 63%);
   --radius: 0.5rem;
   --chart-1: hsl(31, 100%, 63%);
-  --chart-2: hsl(49, 100%, 70%);
-  --chart-3: hsl(215, 19%, 33%);
-  --chart-4: hsl(212, 12%, 55%);
-  --chart-5: hsl(46, 21%, 85%);
+  --chart-2: hsl(49, 100%, 50%);
+  --chart-3: hsl(220, 10%, 85%);
+  --chart-4: hsl(220, 10%, 45%);
+  --chart-5: hsl(220, 15%, 25%);
 }
 
 .dark {
