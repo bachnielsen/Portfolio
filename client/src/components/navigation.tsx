@@ -28,11 +28,7 @@ export default function Navigation() {
   const handleNavClick = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offsetTop = element.offsetTop - 20;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth"
-      });
+      window.scrollTo({ top: element.offsetTop - 20, behavior: "smooth" });
     }
     setIsSidebarOpen(false);
   };
@@ -42,12 +38,13 @@ export default function Navigation() {
     { id: "about", label: "/about" },
     { id: "experience", label: "/experience" },
     { id: "education", label: "/education" },
-    { id: "contact", label: "/contact" }
+    { id: "when-not-working", label: "/hobbies" },
+    { id: "contact", label: "/contact" },
   ];
 
   return (
     <>
-      {/* Mobile Menu Button */}
+      {/* Mobile menu button */}
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         className="fixed top-6 left-6 z-50 md:hidden bg-card border border-border rounded-lg p-2 hover:bg-muted transition-colors"
@@ -59,12 +56,33 @@ export default function Navigation() {
         )}
       </button>
 
-      {/* Sidebar Navigation */}
-      <nav className={`fixed top-0 left-0 h-full w-64 z-40 transform transition-transform duration-300 ease-in-out ${
-        isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-      } md:translate-x-0`}>
+      {/* Desktop: sticky sidebar inside flex layout */}
+      <nav className="hidden md:flex flex-col w-44 shrink-0 sticky top-0 h-screen pt-16 pr-6">
+        <div className="space-y-1">
+          {navItems.map(({ id, label }) => (
+            <button
+              key={id}
+              onClick={() => handleNavClick(id)}
+              className={`w-full text-left px-2 py-2 transition-colors duration-150 ${
+                activeSection === id
+                  ? "text-foreground font-medium"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <span className="font-mono text-sm">{label}</span>
+            </button>
+          ))}
+        </div>
+      </nav>
+
+      {/* Mobile: fixed overlay */}
+      <nav
+        className={`fixed top-0 left-0 h-full w-64 z-40 bg-background md:hidden transform transition-transform duration-300 ease-in-out ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
         <div className="flex flex-col h-full px-4 py-8">
-          <div className="flex-1 space-y-1 pt-8">
+          <div className="space-y-1 pt-8">
             {navItems.map(({ id, label }) => (
               <button
                 key={id}
@@ -82,7 +100,7 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Overlay for mobile */}
+      {/* Mobile overlay backdrop */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-30 md:hidden"

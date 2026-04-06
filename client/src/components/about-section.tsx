@@ -3,8 +3,7 @@ import { personalInfo, skills } from "@/lib/data";
 export default function AboutSection() {
   return (
     <section id="about" className="py-16 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="space-y-8 slide-up">
+      <div className="space-y-8 slide-up">
           <h2 className="section-title text-4xl font-bold">/about</h2>
           
           <div className="space-y-6 text-lg leading-relaxed">
@@ -31,7 +30,6 @@ export default function AboutSection() {
               </span>
             ))}
           </div>
-        </div>
       </div>
     </section>
   );

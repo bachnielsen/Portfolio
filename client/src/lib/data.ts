@@ -22,6 +22,11 @@ export interface Skill {
   name: string;
 }
 
+export interface Hobby {
+  name: string;
+  image: string; // place your photos in client/public/images/ and reference as /images/filename.jpg
+}
+
 export interface PersonalInfo {
   name: string;
   title: string;
@@ -39,91 +44,108 @@ export interface PersonalInfo {
 }
 
 export const personalInfo: PersonalInfo = {
-  name: "Your Name",
-  title: "Senior Software Engineer",
-  tagline: "Passionate about building scalable web applications and creating exceptional user experiences. I specialize in modern JavaScript frameworks and cloud architecture.",
+  name: "Niclas Bach Nielsen",
+  title: "Product Manager & Product Owner",
+  tagline: "Product Manager and Owner with 8+ years of experience building AI-powered SaaS platforms from startup through scale-up.",
   about: {
-    intro: "Hey! I'm [Your Name]. I'm a passionate software engineer with over 5 years of experience building full-stack applications and leading development teams. I love solving complex problems and turning ideas into reality through code.",
-    background: "I've worked with various technologies throughout my career, from traditional server-side applications to modern cloud-native solutions. My expertise lies in JavaScript/TypeScript, React, Node.js, and AWS services. I'm particularly interested in performance optimization, system architecture, and developer experience.",
-    interests: "When I'm not coding, you can find me contributing to open-source projects, writing technical blogs, or exploring new technologies. I believe in continuous learning and sharing knowledge with the developer community."
+    intro: "Product Manager and Owner with 8+ years of experience building AI-powered SaaS platforms from startup through scale-up. Proven track record of shipping products that drive business outcomes — including contributing to a $34.5M Series A investment.",
+    background: "Hands-on technical background (MSc Digital Media Engineering, DTU) with deep experience in agile delivery, qualitative research automation, and AI prototyping using Claude Code and MCP workflows. Equally comfortable shaping product strategy and rolling up sleeves to prototype.",
+    interests: "Outside of work I enjoy hiking, fishing, biking, and weightlifting. I'm also interested in languages and building new things with technology."
   },
   contact: {
-    email: "your.email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    github: "https://github.com/yourusername"
+    email: "niclas.bach@gmail.com",
+    linkedin: "https://www.linkedin.com/in/niclasnielsen/",
+    github: "https://github.com/bachnielsen"
   }
 };
 
 export const skills: Skill[] = [
-  { name: "JavaScript" },
-  { name: "React" },
-  { name: "Node.js" },
-  { name: "TypeScript" },
-  { name: "AWS" },
-  { name: "Docker" },
+  // Product
+  { name: "Product discovery" },
+  { name: "Roadmapping" },
+  { name: "Sprint planning" },
+  { name: "Stakeholder management" },
+  { name: "UX design" },
+  { name: "Customer interviews" },
+  // AI & Technical
+  { name: "Claude Code" },
+  { name: "MCP workflows" },
+  { name: "AI agent workflows" },
+  { name: "Prompt engineering" },
   { name: "Python" },
-  { name: "PostgreSQL" }
+  { name: "Vue 3" },
+  // Tools
+  { name: "Jira" },
+  { name: "Figma" },
+  { name: "Notion" },
+  { name: "Miro" },
 ];
 
 export const experiences: Experience[] = [
   {
-    title: "Senior Software Engineer",
-    company: "TechCorp Inc.",
-    location: "San Francisco, CA",
-    period: "2022 - Present",
+    title: "Product Owner",
+    company: "Autoflows (formerly AG Analytics)",
+    location: "Copenhagen, Denmark",
+    period: "Mar 2025 – Present",
+    version: "v4.0",
+    description: "Automotive SaaS platform serving car dealerships and OEMs across the UK and Southern Europe.",
+    achievements: [
+      "Established agile scrum processes from scratch across two development teams in a post-startup scale-up with no prior product framework",
+      "Launched a WhatsApp communication product enabling dealership clients to contact customers directly, expanding reach across UK and Southern Europe",
+      "Maintained delivery momentum in a high-constraint environment where 80% of developer capacity was consumed by legacy support issues",
+      "Contributed to a full frontend platform rebuild, migrating to Vue 3 for a modernised and scalable user experience",
+      "Led a company-wide rebranding from AG Analytics to Autoflows, coordinating DevOps and engineering on DNS, NS, DMARC, DKIM and SPF configuration",
+      "Accelerated proof-of-concept development by prototyping internal tools using Claude Code, MCPs and AI agent workflows",
+    ],
+  },
+  {
+    title: "Product Manager → Senior Product Owner → Product Owner",
+    company: "GetWhy (formerly UserTribe)",
+    location: "Copenhagen, Denmark",
+    period: "Aug 2021 – Feb 2025",
     version: "v3.0",
-    description: "Leading a team of 5 engineers in developing and maintaining large-scale web applications. Architected microservices infrastructure that improved system performance by 40%.",
+    description: "AI-based qualitative research platform helping clients understand customer needs at scale.",
     achievements: [
-      "Implemented CI/CD pipelines reducing deployment time by 60%",
-      "Mentored junior developers and conducted code reviews",
-      "Collaborated with product teams to define technical requirements"
-    ]
+      "Co-developed a client-facing SaaS platform that contributed directly to a $34.5M Series A investment",
+      "Built proprietary AI models to automate qualitative research analysis, significantly reducing manual processing time",
+      "Drove product development for internal and external tools, boosting team efficiency and accelerating project delivery",
+      "Designed user experiences that improved data quality, internal efficiency and client satisfaction",
+      "Managed and mentored a team of 4, fostering a culture of automation and continuous improvement",
+      "Launched a video-based research tool leveraging proprietary AI, enabling richer and faster consumer insights",
+      "Conducted structured customer interviews to identify friction points and improve core product features",
+    ],
   },
   {
-    title: "Full Stack Developer",
-    company: "StartupCo",
-    location: "Remote",
-    period: "2019 - 2022",
+    title: "Product Owner → Product Developer → Junior Product Developer",
+    company: "UserTribe",
+    location: "Copenhagen, Denmark",
+    period: "Sep 2017 – Aug 2021",
     version: "v2.0",
-    description: "Developed full-stack applications using React, Node.js, and PostgreSQL. Built and deployed scalable solutions serving 100k+ monthly active users.",
+    description: "Qualitative research agency delivering consumer insight reports on digital products.",
     achievements: [
-      "Created responsive web applications with 99.9% uptime",
-      "Integrated third-party APIs and payment systems",
-      "Optimized database queries improving response times by 50%"
-    ]
+      "First hire on the product team — built the product department from the ground up",
+      "Built and led a team of 8 developers in Bulgaria to deliver a client-facing research analysis platform",
+      "Defined the product roadmap and prioritised features based on client needs and business goals",
+      "Built the infrastructure connecting all third-party tools into a semi-automated delivery pipeline, significantly improving project turnaround time",
+      "Identified and integrated third-party tools (including mobile phone interview solutions) to support evolving client needs",
+    ],
   },
-  {
-    title: "Junior Web Developer",
-    company: "WebAgency",
-    location: "New York, NY",
-    period: "2018 - 2019",
-    version: "v1.0",
-    description: "Started career developing websites for small businesses and e-commerce platforms. Gained experience in HTML, CSS, JavaScript, and WordPress development.",
-    achievements: [
-      "Built 20+ responsive websites for various clients",
-      "Implemented SEO best practices improving search rankings",
-      "Collaborated with design team to create pixel-perfect implementations"
-    ]
-  }
 ];
 
 export const education: Education[] = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University of Technology",
-    location: "California, USA",
-    period: "2014 - 2018",
-    version: "edu.2",
-    description: "Focused on software engineering, data structures, algorithms, and system design. Graduated Magna Cum Laude with a GPA of 3.8/4.0.",
-    subjects: ["Data Structures", "Algorithms", "Software Engineering", "Database Systems"]
-  },
-  {
-    degree: "AWS Solutions Architect Certification",
-    institution: "Amazon Web Services",
-    location: "Online",
-    period: "2021",
+    degree: "Master of Science in Digital Media Engineering",
+    institution: "Danmarks Tekniske Universitet (DTU)",
+    location: "Lyngby, Denmark",
+    period: "June 2016",
     version: "edu.1",
-    description: "Comprehensive certification covering AWS cloud services, architecture patterns, and best practices for designing scalable and secure cloud solutions.",
-    subjects: ["Cloud Architecture", "Security", "Scalability"]
-  }
+    description: "",
+    subjects: [],
+  },
+];
+
+export const hobbies: Hobby[] = [
+  { name: "Fishing", image: "/images/fishing.jpg" },
+  { name: "Hiking", image: "/images/hiking.jpg" },
+  { name: "Traveling", image: "/images/traveling.jpg" },
 ];

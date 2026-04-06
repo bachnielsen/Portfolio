@@ -3,12 +3,11 @@ import { personalInfo } from "@/lib/data";
 export default function HeroSection() {
   return (
     <section id="home" className="pt-8 pb-16 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex flex-col items-center text-center space-y-8 fade-in">
+      <div className="flex flex-col items-center text-center space-y-8 fade-in">
           <img
             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
             alt="Professional headshot"
-            className="w-32 h-32 rounded-full object-cover border-4 border-primary shadow-lg"
+            className="w-32 h-32 rounded-full object-cover"
           />
           
           <div className="space-y-4">
@@ -22,7 +21,6 @@ export default function HeroSection() {
               {personalInfo.tagline}
             </p>
           </div>
-        </div>
       </div>
     </section>
   );
