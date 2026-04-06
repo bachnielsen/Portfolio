@@ -5,53 +5,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --background: hsl(0, 0%, 98%);
-  --foreground: hsl(220, 15%, 25%);
-  --card: hsl(0, 0%, 95%);
-  --card-foreground: hsl(220, 15%, 25%);
-  --popover: hsl(0, 0%, 95%);
-  --popover-foreground: hsl(220, 15%, 25%);
-  --primary: hsl(31, 100%, 63%);
-  --primary-foreground: hsl(0, 0%, 98%);
-  --secondary: hsl(220, 5%, 85%);
-  --secondary-foreground: hsl(220, 15%, 25%);
-  --muted: hsl(220, 5%, 85%);
-  --muted-foreground: hsl(220, 10%, 45%);
-  --accent: hsl(49, 100%, 50%);
-  --accent-foreground: hsl(220, 15%, 25%);
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(220, 15%, 15%);
+  --card: hsl(0, 0%, 97%);
+  --card-foreground: hsl(220, 15%, 15%);
+  --popover: hsl(0, 0%, 97%);
+  --popover-foreground: hsl(220, 15%, 15%);
+  --primary: hsl(220, 15%, 15%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(220, 5%, 90%);
+  --secondary-foreground: hsl(220, 15%, 15%);
+  --muted: hsl(220, 5%, 92%);
+  --muted-foreground: hsl(220, 10%, 50%);
+  --accent: hsl(220, 10%, 50%);
+  --accent-foreground: hsl(220, 15%, 15%);
   --destructive: hsl(0, 62%, 50%);
   --destructive-foreground: hsl(0, 0%, 98%);
-  --border: hsl(220, 10%, 85%);
-  --input: hsl(220, 10%, 85%);
-  --ring: hsl(31, 100%, 63%);
+  --border: hsl(220, 10%, 88%);
+  --input: hsl(220, 10%, 88%);
+  --ring: hsl(220, 15%, 15%);
   --radius: 0.5rem;
-  --chart-1: hsl(31, 100%, 63%);
-  --chart-2: hsl(49, 100%, 50%);
-  --chart-3: hsl(220, 10%, 85%);
-  --chart-4: hsl(220, 10%, 45%);
-  --chart-5: hsl(220, 15%, 25%);
-}
-
-.dark {
-  --background: hsl(231, 58%, 8%);
-  --foreground: hsl(46, 21%, 85%);
-  --card: hsl(230, 41%, 12%);
-  --card-foreground: hsl(46, 21%, 85%);
-  --popover: hsl(230, 41%, 12%);
-  --popover-foreground: hsl(46, 21%, 85%);
-  --primary: hsl(31, 100%, 63%);
-  --primary-foreground: hsl(231, 58%, 8%);
-  --secondary: hsl(230, 41%, 12%);
-  --secondary-foreground: hsl(46, 21%, 85%);
-  --muted: hsl(230, 13%, 32%);
-  --muted-foreground: hsl(212, 12%, 55%);
-  --accent: hsl(49, 100%, 70%);
-  --accent-foreground: hsl(231, 58%, 8%);
-  --destructive: hsl(0, 62%, 30%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --border: hsl(215, 19%, 33%);
-  --input: hsl(215, 19%, 33%);
-  --ring: hsl(31, 100%, 63%);
+  --chart-1: hsl(220, 15%, 15%);
+  --chart-2: hsl(220, 10%, 50%);
+  --chart-3: hsl(220, 10%, 88%);
+  --chart-4: hsl(220, 10%, 50%);
+  --chart-5: hsl(220, 15%, 15%);
 }
 
 @layer base {
@@ -102,25 +80,25 @@
   }
   
   .timeline-line {
-    background: linear-gradient(to bottom, hsl(31, 100%, 63%), hsl(215, 19%, 33%));
+    background: linear-gradient(to bottom, hsl(220, 10%, 70%), hsl(220, 10%, 88%));
   }
-  
+
   .timeline-line-yellow {
-    background: linear-gradient(to bottom, hsl(49, 100%, 70%), hsl(215, 19%, 33%));
+    background: linear-gradient(to bottom, hsl(220, 10%, 70%), hsl(220, 10%, 88%));
   }
 }
 
 @layer components {
   .nav-link {
-    @apply transition-all duration-300 ease-in-out hover:text-primary hover:-translate-y-0.5;
+    @apply transition-colors duration-200 ease-in-out hover:text-foreground;
   }
-  
+
   .social-icon {
-    @apply transition-all duration-300 ease-in-out hover:text-primary hover:scale-110;
+    @apply transition-colors duration-200 ease-in-out hover:text-foreground hover:scale-110;
   }
-  
+
   .timeline-card {
-    @apply transition-all duration-300 ease-in-out hover:bg-card hover:-translate-y-1;
+    @apply transition-colors duration-200 ease-in-out;
   }
   
   .changelog-version {

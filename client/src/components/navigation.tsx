@@ -50,7 +50,7 @@ export default function Navigation() {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className="fixed top-6 left-6 z-50 md:hidden bg-card border border-border rounded-lg p-2 hover:bg-primary/10 transition-colors"
+        className="fixed top-6 left-6 z-50 md:hidden bg-card border border-border rounded-lg p-2 hover:bg-muted transition-colors"
       >
         {isSidebarOpen ? (
           <X className="w-5 h-5 text-foreground" />
@@ -63,27 +63,21 @@ export default function Navigation() {
       <nav className={`fixed top-0 left-0 h-full w-64 z-40 transform transition-transform duration-300 ease-in-out ${
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       } md:translate-x-0`}>
-        <div className="flex flex-col h-full p-6">
-          <div className="flex-1 space-y-2 pt-8">
+        <div className="flex flex-col h-full px-4 py-8">
+          <div className="flex-1 space-y-1 pt-8">
             {navItems.map(({ id, label }) => (
               <button
                 key={id}
                 onClick={() => handleNavClick(id)}
-                className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 ${
+                className={`w-full text-left px-2 py-2 transition-colors duration-150 ${
                   activeSection === id
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-primary"
+                    ? "text-foreground font-medium"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 <span className="font-mono text-sm">{label}</span>
               </button>
             ))}
-          </div>
-          
-          <div className="mt-auto pt-6">
-            <p className="text-xs text-muted-foreground font-mono">
-              © 2025 Personal Resume
-            </p>
           </div>
         </div>
       </nav>
