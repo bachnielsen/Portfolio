@@ -48,9 +48,9 @@ export const personalInfo: PersonalInfo = {
   title: "Product Manager & Product Owner",
   tagline: "Product Manager and Owner with 8+ years of experience building AI-powered SaaS platforms from startup through scale-up.",
   about: {
-    intro: "I've spent the last 8 years building digital products, mostly in the research and insights space. I started as the first product hire at a small agency and worked my way up through scale-up environments, which means I'm equally comfortable defining a roadmap from scratch and navigating the messiness of a growing team.",
+    intro: "I've spent the last 8+ years building digital products across both startup and scale-up environments. I'm equally comfortable defining a roadmap from scratch and navigating the messiness of a growing team.",
     background: "I have a technical background (MSc from DTU) which means I can sit in a room with engineers and actually follow the conversation. I find that makes a big difference in how fast things move. More recently I've been getting into AI prototyping using Claude Code and MCP workflows, which has become a genuine superpower for moving quickly on early-stage ideas.",
-    interests: "Outside of work I'm usually doing something outdoors — fishing, hiking, camping — or cooking something that takes too long to make."
+    interests: "Outside of work I'm usually doing something outdoors, for example fishing, hiking or camping. I am also very passionate in the kitchen and I like to cook."
   },
   contact: {
     email: "niclas.bach@gmail.com",
