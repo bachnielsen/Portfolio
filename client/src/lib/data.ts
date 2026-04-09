@@ -48,9 +48,9 @@ export const personalInfo: PersonalInfo = {
   title: "Product Manager & Product Owner",
   tagline: "Product Manager and Owner with 8+ years of experience building AI-powered SaaS platforms from startup through scale-up.",
   about: {
-    intro: "Product Manager and Owner with 8+ years of experience building AI-powered SaaS platforms from startup through scale-up. Proven track record of shipping products that drive business outcomes — including contributing to a $34.5M Series A investment.",
-    background: "Hands-on technical background (MSc Digital Media Engineering, DTU) with deep experience in agile delivery, qualitative research automation, and AI prototyping using Claude Code and MCP workflows. Equally comfortable shaping product strategy and rolling up sleeves to prototype.",
-    interests: "Outside of work I enjoy hiking, fishing, biking, and weightlifting. I'm also interested in languages and building new things with technology."
+    intro: "I've spent the last 8 years building digital products, mostly in the research and insights space. I started as the first product hire at a small agency and worked my way up through scale-up environments, which means I'm equally comfortable defining a roadmap from scratch and navigating the messiness of a growing team.",
+    background: "I have a technical background (MSc from DTU) which means I can sit in a room with engineers and actually follow the conversation. I find that makes a big difference in how fast things move. More recently I've been getting into AI prototyping using Claude Code and MCP workflows, which has become a genuine superpower for moving quickly on early-stage ideas.",
+    interests: "Outside of work I'm usually doing something outdoors — fishing, hiking, camping — or cooking something that takes too long to make."
   },
   contact: {
     email: "niclas.bach@gmail.com",
@@ -69,16 +69,19 @@ export const skills: Skill[] = [
   { name: "Customer interviews" },
   // AI & Technical
   { name: "Claude Code" },
-  { name: "MCP workflows" },
+  { name: "MCPs" },
   { name: "AI agent workflows" },
-  { name: "Prompt engineering" },
+  { name: "Google Antigravity" },
   { name: "Python" },
-  { name: "Vue 3" },
+  { name: "C#" },
+  { name: "Machine learning models" },
   // Tools
   { name: "Jira" },
+  { name: "Linear" },
+  { name: "Confluence" },
   { name: "Figma" },
-  { name: "Notion" },
   { name: "Miro" },
+  { name: "Notion" },
 ];
 
 export const experiences: Experience[] = [
@@ -88,47 +91,26 @@ export const experiences: Experience[] = [
     location: "Copenhagen, Denmark",
     period: "Mar 2025 – Present",
     version: "v4.0",
-    description: "Automotive SaaS platform serving car dealerships and OEMs across the UK and Southern Europe.",
-    achievements: [
-      "Established agile scrum processes from scratch across two development teams in a post-startup scale-up with no prior product framework",
-      "Launched a WhatsApp communication product enabling dealership clients to contact customers directly, expanding reach across UK and Southern Europe",
-      "Maintained delivery momentum in a high-constraint environment where 80% of developer capacity was consumed by legacy support issues",
-      "Contributed to a full frontend platform rebuild, migrating to Vue 3 for a modernised and scalable user experience",
-      "Led a company-wide rebranding from AG Analytics to Autoflows, coordinating DevOps and engineering on DNS, NS, DMARC, DKIM and SPF configuration",
-      "Accelerated proof-of-concept development by prototyping internal tools using Claude Code, MCPs and AI agent workflows",
-    ],
+    description: "Autoflows is an automotive SaaS platform serving car dealerships and OEMs across the UK and Southern Europe. I joined to build product structure from scratch across two teams in a company that had outgrown its startup roots but hadn't yet built the processes to match. Since then I've shipped a WhatsApp communication product that opened up new markets, contributed to a full frontend rebuild in Vue 3, and led the company's rebrand from AG Analytics to Autoflows, which turned out to involve a lot more infrastructure coordination than anyone had anticipated. I also prototype internal tools using Claude Code and AI agent workflows to move faster on early-stage ideas.",
+    achievements: [],
   },
   {
-    title: "Product Manager → Senior Product Owner → Product Owner",
+    title: "Product Manager · Senior Product Owner · Product Owner",
     company: "GetWhy (formerly UserTribe)",
     location: "Copenhagen, Denmark",
     period: "Aug 2021 – Feb 2025",
     version: "v3.0",
-    description: "AI-based qualitative research platform helping clients understand customer needs at scale.",
-    achievements: [
-      "Co-developed a client-facing SaaS platform that contributed directly to a $34.5M Series A investment",
-      "Built proprietary AI models to automate qualitative research analysis, significantly reducing manual processing time",
-      "Drove product development for internal and external tools, boosting team efficiency and accelerating project delivery",
-      "Designed user experiences that improved data quality, internal efficiency and client satisfaction",
-      "Managed and mentored a team of 4, fostering a culture of automation and continuous improvement",
-      "Launched a video-based research tool leveraging proprietary AI, enabling richer and faster consumer insights",
-      "Conducted structured customer interviews to identify friction points and improve core product features",
-    ],
+    description: "GetWhy is an AI-powered qualitative research platform that helps companies understand their customers at scale. Over nearly four years I grew from Product Owner to Product Manager, working across both internal tooling and the core client-facing platform. The work I'm most proud of is co-building the SaaS platform that helped the company raise a $34.5M Series A. Along the way I built proprietary AI models to automate research analysis, managed a team of four, and launched a video research tool that made consumer insights significantly faster to produce.",
+    achievements: [],
   },
   {
-    title: "Product Owner → Product Developer → Junior Product Developer",
+    title: "Product Owner · Product Developer · Junior Product Developer",
     company: "UserTribe",
     location: "Copenhagen, Denmark",
     period: "Sep 2017 – Aug 2021",
     version: "v2.0",
-    description: "Qualitative research agency delivering consumer insight reports on digital products.",
-    achievements: [
-      "First hire on the product team — built the product department from the ground up",
-      "Built and led a team of 8 developers in Bulgaria to deliver a client-facing research analysis platform",
-      "Defined the product roadmap and prioritised features based on client needs and business goals",
-      "Built the infrastructure connecting all third-party tools into a semi-automated delivery pipeline, significantly improving project turnaround time",
-      "Identified and integrated third-party tools (including mobile phone interview solutions) to support evolving client needs",
-    ],
+    description: "This is where I got my start in product. I was the first product hire at a qualitative research agency and spent four years building the department from nothing. Early on that meant identifying and stitching together third-party tools into a semi-automated delivery pipeline. Later it meant leading a team of eight developers in Bulgaria to build a client-facing research platform and owning the roadmap end to end.",
+    achievements: [],
   },
 ];
 
@@ -138,6 +120,15 @@ export const education: Education[] = [
     institution: "Danmarks Tekniske Universitet (DTU)",
     location: "Lyngby, Denmark",
     period: "June 2016",
+    version: "edu.2",
+    description: "",
+    subjects: [],
+  },
+  {
+    degree: "Bachelor of Science in Media Technology (Medialogy)",
+    institution: "Aalborg University Copenhagen (AAU)",
+    location: "Copenhagen, Denmark",
+    period: "June 2014",
     version: "edu.1",
     description: "",
     subjects: [],
@@ -145,7 +136,9 @@ export const education: Education[] = [
 ];
 
 export const hobbies: Hobby[] = [
-  { name: "Fishing", image: "/images/fishing.jpg" },
-  { name: "Hiking", image: "/images/hiking.jpg" },
-  { name: "Traveling", image: "/images/traveling.jpg" },
+  { name: "Fishing", image: "/images/fishing.jpeg" },
+  { name: "Hiking", image: "/images/hiking.jpeg" },
+  { name: "Camping", image: "/images/camping.jpeg" },
+  { name: "Cooking", image: "/images/cooking.jpeg" },
+  { name: "Travel", image: "/images/travel.jpeg" },
 ];

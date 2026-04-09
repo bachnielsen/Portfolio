@@ -19,11 +19,7 @@ export default function ContactSection() {
           <h2 className="section-title text-4xl font-bold">/contact</h2>
 
           <div className="space-y-8">
-            <div className="text-center space-y-6">
-              <p className="text-xl text-foreground max-w-2xl mx-auto leading-relaxed">
-                Working on something interesting? I'm always open to discussing new opportunities,
-                collaborating on projects, or just having a chat about technology and software development.
-              </p>
+            <div className="text-center">
               <p className="text-lg text-muted-foreground">
                 Feel free to reach out through any of these channels:
               </p>
@@ -66,11 +62,6 @@ export default function ContactSection() {
 
             </div>
 
-            <div className="text-center">
-              <p className="text-muted-foreground italic">
-                — Let's build something amazing together
-              </p>
-            </div>
           </div>
       </div>
     </section>

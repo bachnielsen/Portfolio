@@ -2,19 +2,25 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("about");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 50;
       const sections = document.querySelectorAll("section[id]");
-      const scrollPosition = window.scrollY + 100;
 
+      if (atBottom) {
+        const last = sections[sections.length - 1];
+        setActiveSection(last?.getAttribute("id") || "");
+        return;
+      }
+
+      const scrollPosition = window.scrollY + 100;
       sections.forEach((section) => {
         const sectionTop = (section as HTMLElement).offsetTop;
         const sectionHeight = section.clientHeight;
         const sectionId = section.getAttribute("id");
-
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           setActiveSection(sectionId || "");
         }
@@ -34,11 +40,10 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { id: "home", label: "/home" },
     { id: "about", label: "/about" },
     { id: "experience", label: "/experience" },
     { id: "education", label: "/education" },
-    { id: "when-not-working", label: "/hobbies" },
+    { id: "when-not-working", label: "/out of office" },
     { id: "contact", label: "/contact" },
   ];
 
@@ -56,8 +61,8 @@ export default function Navigation() {
         )}
       </button>
 
-      {/* Desktop: sticky sidebar inside flex layout */}
-      <nav className="hidden md:flex flex-col w-44 shrink-0 sticky top-0 h-screen pt-16 pr-6">
+      {/* Desktop nav items — positioning handled by parent */}
+      <nav className="hidden md:block">
         <div className="space-y-1">
           {navItems.map(({ id, label }) => (
             <button

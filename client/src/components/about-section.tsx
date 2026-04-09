@@ -10,12 +10,12 @@ export default function AboutSection() {
             <p className="text-foreground">
               {personalInfo.about.intro}
             </p>
-            
-            <p className="text-muted-foreground">
+
+            <p className="text-foreground">
               {personalInfo.about.background}
             </p>
-            
-            <p className="text-muted-foreground">
+
+            <p className="text-foreground">
               {personalInfo.about.interests}
             </p>
           </div>

@@ -26,14 +26,9 @@ export default function ExperienceSection() {
                     {experience.location}
                   </span>
                 </div>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {experience.description}
                 </p>
-                <ul className="text-muted-foreground text-sm space-y-1 ml-4">
-                  {experience.achievements.map((achievement, idx) => (
-                    <li key={idx}>— {achievement}</li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
